@@ -31,9 +31,7 @@ for (int i = 0; i < size / 2; i++) {
   temp = arr[i];
   arr[i] = arr[size - i - 1];
   arr[size - i - 1] = temp;
-}
-  
-  
+}  
 }
 
 /*
@@ -44,7 +42,32 @@ los números pares del arreglo original.
 newsize apunta a una dirección válida que no ha sido inicializada con nigún valor específico. 
 *newsize debe almacenar el tamaño del nuevo arreglo que se retorna.
 */
-int *filterEvenNumbers(int arr[], int size, int *newSize) { return NULL; }
+int *filterEvenNumbers(int arr[], int size, int *newSize) { 
+int contador = 0;
+for (int i = 0; i < size; i++) {
+  if (arr[i] % 2 == 0) {
+    contador++;
+  }
+}
+int *nuevoArreglo = (int *)malloc(contador * sizeof(int));
+if (nuevoArreglo == NULL) {
+  *newSize = 0;
+  return NULL; }
+
+int k = 0;
+for (int i = 0; i < size; i++) {
+  if (arr[i] % 2 == 0) {
+    nuevoArreglo[k] = arr[i];
+    k++;
+  }
+}
+*newSize = contador;
+return nuevoArreglo;
+} 
+
+  
+  
+  
 
 /*
 Ejercicio 4: Fusión de dos Arreglos Ordenados
