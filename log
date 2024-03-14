@@ -26,3 +26,17 @@ Thu 14 Mar 2024 02:24:57 PM UTC:
  tests:  0|6
 total_score: 10/70
 e7ca7ea
+Thu 14 Mar 2024 02:34:21 PM UTC: 
+ exercises.c | 11 ++++++++++-
+ 1 file changed, 10 insertions(+), 1 deletion(-)
+In file included from test.c:1:
+exercises.c: In function ‘reverseArray’:
+exercises.c:35:10: error: ‘return’ with a value, in function returning void [-Werror=return-type]
+   35 |   return temp;
+      |          ^~~~
+exercises.c:28:6: note: declared here
+   28 | void reverseArray(int arr[], int size) {
+      |      ^~~~~~~~~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+ffda5c5
