@@ -72,7 +72,27 @@ ordenados de menor a mayor y sus tamaños, y luego fusione estos dos
 arreglos en un tercer arreglo también ordenado de menor a mayor.
 */
 void mergeSortedArrays(int arr1[], int size1, int arr2[], int size2,
-                       int result[]) {}
+                       int result[]) 
+{
+int i;
+int k;
+int z;
+
+while (i < size1 && k < size2)
+{
+  if (arr1[i] < arr2[k]) {
+    result[z++] = arr1[i++];
+  } else {
+    result[z++] = arr2[k++];
+  }
+}
+while (i < size1) {
+  result[z++] = arr1[i++];
+}
+
+while (k < size2) {
+  result[z++] = arr2[k++];  
+}
 
 /*
 Ejercicio 5: Comprobación de Ordenación
@@ -133,4 +153,11 @@ typedef struct nodo {
   struct nodo *siguiente; // puntero al siguiente nodo
 } Nodo;
 
-Nodo *crearListaEnlazada(int arr[], int size) { return NULL; }
+Nodo *crearListaEnlazada(int arr[], int size) 
+{
+  if (size == 0) exit EXIT_FAILURE;
+  
+  
+  
+  return NULL; 
+}
