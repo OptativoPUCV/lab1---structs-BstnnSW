@@ -177,3 +177,13 @@ Fri 15 Mar 2024 09:49:46 PM UTC:
  tests:  0|1
 total_score: 60/70
 bbff8f7
+Fri 15 Mar 2024 09:54:43 PM UTC: 
+ exercises.c | 20 ++++++++++++++++++++
+ 1 file changed, 20 insertions(+)
+In file included from test.c:1:
+exercises.c:170:9: error: ‘crearListaEnlazada’ defined but not used [-Werror=unused-function]
+  170 |   Nodo *crearListaEnlazada(int arr[], int size) {
+      |         ^~~~~~~~~~~~~~~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+459c1a0

@@ -167,7 +167,27 @@ typedef struct nodo {
 
 Nodo *crearListaEnlazada(int arr[], int size) 
 {
-  
+  Nodo *crearListaEnlazada(int arr[], int size) {
+      if (size == 0) // Si el arreglo está vacío, devolvemos NULL
+          return NULL;
+
+      Nodo *head = (Nodo *)malloc(sizeof(Nodo)); // Creamos el primer nodo
+      head->numero = arr[0]; // Asignamos el primer elemento del arreglo al nodo
+      head->siguiente = NULL; // Inicializamos el puntero siguiente a NULL
+
+      Nodo *current = head; // Creamos un puntero auxiliar para recorrer la lista
+
+      // Recorremos el arreglo desde el segundo elemento
+      for (int i = 1; i < size; i++) {
+          Nodo *newNode = (Nodo *)malloc(sizeof(Nodo)); // Creamos un nuevo nodo
+          newNode->numero = arr[i]; // Asignamos el elemento del arreglo al nodo
+          newNode->siguiente = NULL; // Inicializamos el puntero siguiente a NULL
+          current->siguiente = newNode; // Enlazamos el nuevo nodo al final de la lista
+          current = newNode; // Movemos el puntero auxiliar al nuevo nodo
+      }
+
+      return head; // Devolvemos un puntero al primer nodo de la lista
+  }
   
   
   
