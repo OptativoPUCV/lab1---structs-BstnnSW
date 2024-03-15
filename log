@@ -187,3 +187,9 @@ exercises.c:170:9: error: ‘crearListaEnlazada’ defined but not used [-Werror
 cc1: all warnings being treated as errors
 Compilation failed
 459c1a0
+Fri 15 Mar 2024 09:54:58 PM UTC: 
+ exercises.c | 20 --------------------
+ 1 file changed, 20 deletions(-)
+ tests:  0|1
+total_score: 60/70
+3e35155
