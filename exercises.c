@@ -102,11 +102,24 @@ y luego devuelva 1 si el arreglo está ordenado en orden ascendente,
 */
 int checkSorted(int arr[], int size) { 
 int i;
+int ascent = 1;
+int descent = 1;
 for (i = 1; i < size; i++) {
-  
+  if (arr[i - 1] > arr[i]) {
+    ascent = 0;
+  } else if (arr[i - 1] < arr[i]) {
+    descent = 0;
+  }
+}
+if (ascent == 1) {
+  return 1;
+} else if (descent == 1) {
+  return -1;
+} else {
+  return 0;
 }
   
-  return -2; }
+}
 
 /*
 Ejercicio 6: Información de una Biblioteca
