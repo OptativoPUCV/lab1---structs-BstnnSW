@@ -193,3 +193,15 @@ Fri 15 Mar 2024 09:54:58 PM UTC:
  tests:  0|1
 total_score: 60/70
 3e35155
+Sat 16 Mar 2024 10:07:57 PM UTC: 
+ exercises.c | 17 ++++++++++++++++-
+ 1 file changed, 16 insertions(+), 1 deletion(-)
+In file included from test.c:1:
+exercises.c: In function ‘crearListaEnlazada’:
+exercises.c:184:29: error: ‘lista’ undeclared (first use in this function); did you mean ‘list’?
+  184 |         ultimo->siguiente = lista;
+      |                             ^~~~~
+      |                             list
+exercises.c:184:29: note: each undeclared identifier is reported only once for each function it appears in
+Compilation failed
+2805040
